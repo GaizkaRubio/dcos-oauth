@@ -125,7 +125,7 @@ func putUsers(ctx context.Context, w http.ResponseWriter, r *http.Request) *comm
 	log.Debugf("User created: %+v\n", uid)
 
 	segmentKey := ctx.Value("segment-key").(string)
-	go newUserEmail(segmentKey, uid, &user)
+	//go newUserEmail(segmentKey, uid, &user)
 
 	return nil
 }
